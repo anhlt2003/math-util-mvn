@@ -32,4 +32,19 @@ public class MathUtilityTest {
     public void verifyFactorialGivenRightArgument0ReturnsOk(){
         assertEquals(1, MathUtility.getFactorial(0));
     }
+    
+    //Các test case trên không đẹp vì chỉ khác nhau phần data
+    //Trong nghề kiểm thử có 1 kĩ thuật là tách hẳn data kiểm thử ra 1 chỗ cho dễ nhing, dễ quản lí được data thiếu đủ hay không
+    //Sau đó ta đưa bộ data vào trong câu lệnh so sánh qua các tham số(parameter)
+    //Tức là assertequals(expected, actual) là 2 tham số
+    //Ứng với bộ data được tách ra
+    //                  120     5!
+    //                  720     6!
+    //                  24      4!
+    //                  6       3!
+    //                  ...     ...
+    //                  Mảng [4][2] {0, 1} {1, 1} {2, 2} {3, 6}
+    //Code nhìn gọn, phát hiện thiếu đủ data, test case
+    //Kĩ thuật tách data kiểm thử ra khỏi câu lệnh so sánh -> Được gọi
+    //Là DDT - DATA DRIVEN TESTING - Kiểm thử theo hướng tách data riêng rẽ
 }
